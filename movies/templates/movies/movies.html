@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
+    <style>
+        body{
+            background-color: lightslategray;
+        }
+    
+    </style>
 </head>
 <body>
-    <h1>Movies</h1>
+    <h1>Top 100 Movies</h1>
     <ul>
 
     {% for movie in movies %}
-      <li>{{movie.title}}</li>
+      <li><a href={{movie.id}}>{{movie.title}}</a></li>
         {% endfor %}
     </ul>
+    <br>
+    <p><h2>Add your favourite!</h2></p>
+    <a href="/movies/add">Add a movie</a>
 </body>
-</html>
+</html>  
