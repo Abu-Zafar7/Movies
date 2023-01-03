@@ -12,7 +12,7 @@ def movies(request):
 
 
 def homepage(request):
-    return HttpResponse("HOME PAGE")
+    return render(request,'movies/homepage.html')
 
 def detail(request,id):
   data = Movie.objects.get(pk = id)
