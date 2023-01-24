@@ -8,7 +8,7 @@ from .models import Movie
 def movies(request):
 
     data = Movie.objects.all()
-    return render(request,"movies\movies.html", {'movies':data})
+    return render(request,"movies/movies.html", {'movies':data})
 
 
 def homepage(request):
